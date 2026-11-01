@@ -21,7 +21,7 @@
   zstd,
   double-conversion,
   util-linux,
-  systemd,
+  systemdLibs,
   systemdSupport ? stdenv.hostPlatform.isLinux,
   libb2,
   md4c,
@@ -135,7 +135,7 @@ stdenv.mkDerivation {
     unixodbcDrivers.mariadb
   ]
   ++ lib.optionals systemdSupport [
-    systemd
+    systemdLibs
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     util-linux
