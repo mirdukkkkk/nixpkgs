@@ -11,7 +11,7 @@
   vala,
   wrapGAppsHook3,
   dbus,
-  systemd,
+  systemdLibs,
   dconf ? null,
   glib,
   gdk-pixbuf,
@@ -187,7 +187,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     dbus
-    systemd
+    systemdLibs
     dconf
     isocodes
     json-glib
