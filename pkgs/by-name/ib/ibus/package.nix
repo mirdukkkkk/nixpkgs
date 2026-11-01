@@ -189,11 +189,9 @@ stdenv.mkDerivation (finalAttrs: {
     dbus
     systemd
     dconf
-    python3.pkgs.pygobject3 # for pygobject overrides
     isocodes
     json-glib
     libx11
-    vala # for share/vala/Makefile.vapigen (PKG_CONFIG_VAPIGEN_VAPIGEN)
   ]
   ++ lib.optionals (!libOnly) [
     gtk3
@@ -201,6 +199,8 @@ stdenv.mkDerivation (finalAttrs: {
     gdk-pixbuf
     libdbusmenu-gtk3
     libnotify
+    python3.pkgs.pygobject3 # for pygobject overrides
+    vala # for share/vala/Makefile.vapigen (PKG_CONFIG_VAPIGEN_VAPIGEN)
   ]
   ++ lib.optionals withWayland [
     libxkbcommon
