@@ -26,6 +26,7 @@ python.pkgs.buildPythonApplication (finalAttrs: {
 
   pythonRelaxDeps = [
     "onnx"
+    "pillow"
   ];
 
   build-system = with python.pkgs; [
