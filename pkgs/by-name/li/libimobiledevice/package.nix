@@ -77,6 +77,9 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = with lib.maintainers; [ RossComputerGuy ];
+    maintainers = with lib.maintainers; [
+      RossComputerGuy
+      mirdukkkkk
+    ];
   };
 })
